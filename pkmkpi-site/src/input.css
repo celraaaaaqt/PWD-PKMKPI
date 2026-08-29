@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-scale: 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  body {
+    font-family: theme("fontFamily.display");
+    color: theme("colors.ink");
+    background-color: theme("colors.canvas");
+    font-size: calc(1rem * var(--font-scale));
+  }
+
+  ::selection {
+    background-color: theme("colors.accent-gold-light");
+    color: theme("colors.ink");
+  }
+
+  :focus-visible {
+    outline: 3px solid theme("colors.accent-gold");
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .section-x {
+    @apply mx-auto w-full max-w-[1280px] px-5 sm:px-8 lg:px-10;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xs px-7 h-[46px] text-btn uppercase transition-[transform,box-shadow,background-color] duration-200 ease-out;
+  }
+
+  .btn-primary {
+    @apply btn bg-accent-green text-white hover:bg-accent-green-bright active:translate-y-px;
+  }
+
+  .btn-outline {
+    @apply btn bg-transparent text-primary border border-primary hover:bg-primary hover:text-white;
+  }
+
+  .btn-gold {
+    @apply btn bg-accent-gold text-white hover:bg-accent-gold-light;
+  }
+
+  .card-tilt-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+    will-change: transform;
+  }
+
+  .card-hover-lift {
+    @apply transition-[transform,box-shadow,border-color] duration-200 ease-out;
+  }
+  .card-hover-lift:hover {
+    @apply -translate-y-1 border-hairline-strong shadow-lift;
+  }
+
+  /* Tier 3 scroll reveal */
+  .sr-item {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .sr-left {
+    opacity: 0;
+    transform: translateX(-32px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .sr-right {
+    opacity: 0;
+    transform: translateX(32px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .sr-scale {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .sr-visible {
+    opacity: 1 !important;
+    transform: translate(0, 0) scale(1) !important;
+  }
+  .delay-80 { transition-delay: 80ms; }
+  .delay-160 { transition-delay: 160ms; }
+  .delay-240 { transition-delay: 240ms; }
+  .delay-320 { transition-delay: 320ms; }
+  .delay-400 { transition-delay: 400ms; }
+}
+
+/* Tier 4: reduced motion / accessibility overrides */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+    transform: none !important;
+  }
+  .card-tilt-3d, .card-hover-lift {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
+
+body.animations-paused *,
+body.animations-paused *::before,
+body.animations-paused *::after {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+/* AAA High-Contrast Mode */
+body.high-contrast {
+  background: #000000 !important;
+  color: #FFFFFF !important;
+}
+body.high-contrast .hc-surface {
+  background: #0B0F19 !important;
+  border: 2px solid #FACC15 !important;
+  color: #FFFFFF !important;
+}
+body.high-contrast .hc-link,
+body.high-contrast a {
+  color: #00FFFF !important;
+}
+body.high-contrast .btn-primary,
+body.high-contrast .btn-gold {
+  background: #4ADE80 !important;
+  color: #000000 !important;
+}
+body.high-contrast section,
+body.high-contrast header,
+body.high-contrast footer {
+  background: #000000 !important;
+  color: #FFFFFF !important;
+  border-color: #FACC15 !important;
+}
+body.high-contrast p,
+body.high-contrast span,
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3 {
+  color: inherit !important;
+}
+
+/* Dyslexia-friendly mode */
+body.dyslexia-font,
+body.dyslexia-font * {
+  font-family: "Comic Sans MS", "Lexend", sans-serif !important;
+  letter-spacing: 0.06em !important;
+  word-spacing: 0.12em !important;
+  line-height: 1.85 !important;
+}
+
+/* Speech synthesis reading highlight */
+.tts-active {
+  outline: 3px solid theme("colors.accent-gold");
+  outline-offset: 4px;
+  border-radius: 4px;
+}

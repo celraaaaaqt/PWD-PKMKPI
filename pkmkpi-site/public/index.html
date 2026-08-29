@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PKMKPI Federation — Empowering PWDs Across the Nation</title>
+<meta name="description" content="Pambansang Kapisanan ng mga May Kapansanan ng Pilipinas (PKMKPI) — the sole national federation uniting Persons with Disabilities in the Philippines." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Merriweather:ital,wght@1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./dist/output.css" />
+</head>
+<body class="bg-canvas text-ink antialiased">
+
+<!-- Skip link -->
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-xs">Skip to content</a>
+
+<!-- Utility Bar -->
+<div class="bg-primary-dark text-white h-[38px] flex items-center">
+  <div class="section-x w-full flex items-center justify-between gap-4 overflow-hidden">
+    <p class="text-caption whitespace-nowrap flex items-center gap-1.5">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-accent-gold-light shrink-0" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+      SEC Reg. No. CN201012345
+    </p>
+  </div>
+</div>
+
+
+<!-- Primary Nav -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-hairline h-[76px]">
+  <nav class="section-x h-full flex items-center justify-between gap-10" aria-label="Primary">
+    <a href="#main" class="flex items-center gap-2 shrink-0">
+      <span class="w-9 h-9 rounded-full border-2 border-canvas flex items-center justify-center text-accent-gold" aria-hidden="true">
+      <img src="/pkmkpi-site/src/assets/pkmpki-logo.jpg">
+     </span>
+      <span class="text-title-sm text-primary leading-tight">PKMKPI, <span class="font-semibold text-ink-light">Inc.</span></span>
+    </a>
+
+    <ul class="hidden lg:flex items-center gap-8 text-nav-link text-ink-light">
+      <li><a href="#main" class="hover:text-primary transition-colors">Home</a></li>
+      <li><a href="#about" class="hover:text-primary transition-colors">About Us</a></li>
+      <li><a href="#programs" class="hover:text-primary transition-colors">Programs</a></li>
+      <li><a href="#goals-values" class="hover:text-primary transition-colors">Goals & Values</a></li>
+      <li><a href="#regions" class="hover:text-primary transition-colors">Regions</a></li>
+      <li><a href="#tod" class="hover:text-primary transition-colors">Types of Disability</a></li>
+      <li><a href="#resources" class="hover:text-primary transition-colors">Resources</a></li>
+    </ul>
+
+    <div class="flex items-center gap-1 sm:gap-3">
+      <div class="hidden sm:flex items-center gap-1 border-r border-hairline pr-3 mr-1">
+        <button id="btn-tts" type="button" aria-pressed="false" title="Read page aloud" class="w-9 h-9 flex items-center justify-center rounded-xs text-ink-muted hover:text-primary hover:bg-surface-soft transition-colors">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></svg>
+          <span class="sr-only">Read page aloud</span>
+        </button>
+        <button id="btn-contrast" type="button" aria-pressed="false" title="Toggle high contrast" class="w-9 h-9 flex items-center justify-center rounded-xs text-ink-muted hover:text-primary hover:bg-surface-soft transition-colors">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor" stroke="none"/></svg>
+          <span class="sr-only">Toggle high contrast mode</span>
+        </button>
+        <button id="btn-textsize" type="button" title="Increase text size" class="w-9 h-9 flex items-center justify-center rounded-xs text-ink-muted hover:text-primary hover:bg-surface-soft transition-colors text-[13px] font-bold">
+          <span class="text-[9px] ml-px">A</span>
+          <span class="sr-only">Cycle text size</span>
+        </button>
+      </div>
+      <a href="#donate" class="btn-primary hidden sm:inline-flex">Donate</a>
+      <button id="btn-menu" type="button" class="lg:hidden w-10 h-10 flex items-center justify-center text-primary" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <span class="sr-only">Open menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="lg:hidden hidden border-t border-hairline bg-white">
+    <ul class="section-x py-4 flex flex-col gap-4 text-nav-link text-ink-light">
+      <li><a href="#main" class="text-accent-gold">Home</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#goals-values">Goals & Values</a></li>
+      <li><a href="#regions">Regions</a></li>
+      <li><a href="#tod">Types of Disability</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#donate" class="btn-primary w-full">Donate Now</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+  <!-- Hero -->
+  <section class="section-x py-14 lg:py-section overflow-x-clip">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+      
+      <!-- Left column -->
+      <div class="lg:col-span-7 sr-item">
+
+        <h1 class="text-display-xl text-primary mb-6 max-w-xl">
+          Empowering PWDs<br class="hidden sm:block" /> Across the Nation.
+        </h1>
+
+        <p class="text-body-lead text-ink-light max-w-lg mb-8">
+          The sole national federation uniting Persons with Disabilities in the Philippines. We build resilient, inclusive communities through advocacy, support, and systemic change.
+        </p>
+
+        <blockquote class="inline-block bg-primary text-white px-7 py-5 rounded-md bl border-t-4 border-t-[#3B82F6]">
+          <p class="font-editorial italic text-title-md ">&ldquo;Nothing About Us Without Us.&rdquo;</p>
+        </blockquote>
+
+        <div class="flex flex-wrap gap-4 mt-9">
+          <a href="#donate" class="btn-primary">Support the Movement</a>
+          <a href="#about" class="btn-outline">Read Our Charter</a>
+        </div>
+      </div>
+
+      <!-- Right column: image collage -->
+      <div class="lg:col-span-5 relative sr-scale delay-160">
+        <div id="tilt-card" class="card-tilt-3d relative rounded-md overflow-hidden aspect-[4/5] sm:aspect-[5/5.5] shadow-lift">
+          <img
+            src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1000&q=80"
+            alt="Federation members and volunteers collaborating at a community table"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-primary-dark/40 via-transparent to-transparent"></div>
+
+          <!-- Regions badge -->
+          <div class="hc-surface absolute top-5 left-5 bg-white/95 backdrop-blur rounded-sm px-4 py-3 shadow-lift flex items-center gap-3">
+            <span class="w-9 h-9 rounded-xs bg-badge-gold-bg text-badge-gold-text flex items-center justify-center shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 10h18M9 4v16M15 4v16"/></svg>
+            </span>
+            <div class="leading-tight">
+              <p class="text-title-lg text-primary leading-none">17</p>
+              <p class="text-caption text-ink-muted uppercase mt-1">Regions</p>
+            </div>
+          </div>
+
+          <!-- Members badge -->
+          <div class="hc-surface absolute bottom-5 right-5 bg-primary-dark/90 backdrop-blur rounded-sm px-4 py-3 shadow-lift flex items-center gap-3">
+            <span class="w-9 h-9 rounded-xs bg-white/10 text-accent-gold-light flex items-center justify-center shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </span>
+            <div class="leading-tight">
+              <p class="text-title-lg text-white leading-none">40K+</p>
+              <p class="text-caption text-slate-300 uppercase mt-1">Members</p>
+            </div>
+          </div>
+
+          <!-- Disability types badge -->
+          <div class="hc-surface absolute bottom-5 left-5 bg-primary-dark/90 backdrop-blur rounded-sm px-4 py-3 shadow-lift flex items-center gap-3">
+            <span class="w-9 h-9 rounded-xs bg-white text-primary flex items-center justify-center shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="4" r="1.6" fill="currentColor" stroke="none"/><path d="M12 8v5l4 5M12 13l-4 5M8 11h8"/></svg>
+            </span>
+            <div class="leading-tight">
+              <p class="text-title-lg text-white leading-none">10</p>
+              <p class="text-caption text-slate-300 uppercase mt-1">Disability Types</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- National Declaration Band -->
+  <section class="bg-primary text-white border-t-4 border-accent-gold">
+    <div class="section-x py-16 text-center sr-item">
+      <h2 class="text-display-md mb-4">Thank You For The Love and Support</h2>
+      <p class="text-body-lead text-slate-300 max-w-2xl mx-auto">Together, we are breaking barriers and building a nation where every individual is valued and empowered.</p>
+    </div>
+  </section>
+
+  <!-- Strategic Goals & Values -->
+  <section id="programs" class="bg-canvas-subtle">
+    <div class="section-x py-section">
+      <div class="text-center max-w-2xl mx-auto mb-14 sr-item">
+        <h2 class="text-display-md text-primary mb-4">Strategic Goals &amp; Values</h2>
+        <p class="text-body-lead text-ink-light">The pillars that guide our mission towards total inclusivity and empowerment.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 lg:gap-5">
+        <!-- A -->
+        <article class="card-hover-lift hc-surface bg-white border border-hairline border-t-4 border-t-[#3B82F6] rounded-sm p-6 sr-item delay-80">
+          <div class="flex items-start justify-between mb-5">
+            <span class="font-editorial italic text-display-sm text-[#3B82F6]">A</span>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="text-hairline-strong"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M7 14v5a2 2 0 0 0 2 2h1"/></svg>
+          </div>
+          <h3 class="text-title-md text-ink mb-2">Advocacy</h3>
+          <p class="text-body-md text-ink-muted">Championing rights and policy changes at local and national levels.</p>
+        </article>
+
+        <!-- E -->
+        <article class="card-hover-lift hc-surface bg-white border border-hairline border-t-4 border-t-accent-green rounded-sm p-6 sr-item delay-160">
+          <div class="flex items-start justify-between mb-5">
+            <span class="font-editorial italic text-display-sm text-accent-green">E</span>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="text-hairline-strong"><path d="M8 14s1.5 2 4 2 4-2 4-2"/><circle cx="12" cy="10" r="8"/><path d="M9 9h.01M15 9h.01"/></svg>
+          </div>
+          <h3 class="text-title-md text-ink mb-2">Empowerment</h3>
+          <p class="text-body-md text-ink-muted">Providing skills, education, and livelihood opportunities.</p>
+        </article>
+
+        <!-- I -->
+        <article class="card-hover-lift hc-surface bg-white border border-hairline border-t-4 border-t-[#8B5CF6] rounded-sm p-6 sr-item delay-240">
+          <div class="flex items-start justify-between mb-5">
+            <span class="font-editorial italic text-display-sm text-[#8B5CF6]">I</span>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="text-hairline-strong"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20v-1a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v1"/><path d="M17 13.5c2.2.4 4 2 4 4.5v1"/></svg>
+          </div>
+          <h3 class="text-title-md text-ink mb-2">Inclusion</h3>
+          <p class="text-body-md text-ink-muted">Ensuring equal access to society, spaces, and digital realms.</p>
+        </article>
+
+        <!-- O -->
+        <article class="card-hover-lift hc-surface bg-white border border-hairline border-t-4 border-t-accent-gold rounded-sm p-6 sr-item delay-320">
+          <div class="flex items-start justify-between mb-5">
+            <span class="font-editorial italic text-display-sm text-accent-gold">O</span>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="text-hairline-strong"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+          </div>
+          <h3 class="text-title-md text-ink mb-2">Organization</h3>
+          <p class="text-body-md text-ink-muted">Strengthening grassroots chapters and federation capacity.</p>
+        </article>
+
+        <!-- U -->
+        <article class="card-hover-lift hc-surface bg-white border border-hairline border-t-4 border-t-error rounded-sm p-6 sr-item delay-400 col-span-2 md:col-span-1">
+          <div class="flex items-start justify-between mb-5">
+            <span class="font-editorial italic text-display-sm text-error">U</span>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="text-hairline-strong"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          </div>
+          <h3 class="text-title-md text-ink mb-2">Unity</h3>
+          <p class="text-body-md text-ink-muted">Fostering solidarity among all disability sectors nationwide.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section id="donate" class="bg-accent-gold">
+    <div class="section-x py-12 text-center sr-item">
+      <h2 class="text-display-sm text-accent-green mb-2">Stand With Us. Build an Inclusive Philippines.</h2>
+      <p class="text-body-md text-badge-gold-text">Your support directly impacts thousands of lives across the archipelago.</p>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer id="resources" class="bg-primary-dark text-white">
+  <div class="section-x py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <a href="#main" class="flex items-center gap-2 mb-4">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-accent-gold-light"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>
+        <span class="text-title-sm">PKMKPI</span>
+      </a>
+      <p class="text-body-sm text-slate-400 leading-relaxed">© 2026 PKMKPI National Federation. All Rights Reserved. SEC Reg. No. CN201012345. Nothing About Us Without Us.</p>
+    </div>
+
+    <div>
+      <h3 class="text-eyebrow text-slate-400 mb-4">Organization</h3>
+      <ul class="space-y-3 text-body-md text-slate-300">
+        <li><a href="#about" class="hover:text-white transition-colors">Mission &amp; Vision</a></li>
+        <li><a href="#regions" class="hover:text-white transition-colors">Regional Chapters</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-eyebrow text-slate-400 mb-4">Legal &amp; Support</h3>
+      <ul class="space-y-3 text-body-md text-slate-300">
+        <li><a href="#accessibility" class="hover:text-white transition-colors">Accessibility Statement</a></li>
+        <li><a href="#privacy" class="hover:text-white transition-colors">Privacy Policy</a></li>
+        <li><a href="#contact" class="hover:text-white transition-colors">Contact Support</a></li>
+      </ul>
+    </div>
+
+    <div class="flex sm:justify-end items-start">
+      <div class="hc-surface border border-white/15 rounded-xs px-4 py-3 flex items-center gap-2 text-body-sm text-slate-300">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-accent-gold-light shrink-0"><path d="M12 2l7 4v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/></svg>
+        Transparency Seal
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Live region for accessibility status -->
+<div id="a11y-status" role="status" aria-live="polite" class="sr-only"></div>
+
+<script src="./js/main.js" defer></script>
+</body>
+</html>
