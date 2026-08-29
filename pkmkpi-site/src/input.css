@@ -13,7 +13,7 @@
 
   html, body {
     max-width: 100vw;
-    overflow-x: hidden;
+    overflow-x: clip;
     position: relative;
   }
 
@@ -46,6 +46,16 @@
 
   .btn-primary {
     @apply btn bg-accent-green text-white hover:bg-accent-green-bright active:translate-y-px;
+  }
+
+  .region-filter-btn {
+    @apply px-4 py-2 rounded-full text-body-sm font-semibold border border-hairline text-ink-muted transition-colors;
+  }
+  .region-filter-btn:hover {
+    @apply border-primary-light text-primary;
+  }
+  .region-filter-btn.is-active {
+    @apply bg-primary text-white border-primary;
   }
 
   .btn-outline {

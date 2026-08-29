@@ -4,32 +4,45 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#0A2540",
-        "primary-dark": "#001B33",
-        "primary-light": "#133E68",
-        "accent-gold": "#D97706",
-        "accent-gold-light": "#F59E0B",
-        "accent-green": "#15803D",
-        "accent-green-bright": "#16A34A",
-        "accent-green-soft": "#DCFCE7",
-        ink: "#0F172A",
-        "ink-light": "#334155",
-        "ink-muted": "#64748B",
-        hairline: "#E2E8F0",
-        "hairline-strong": "#CBD5E1",
-        canvas: "#FFFFFF",
-        "canvas-subtle": "#F8FAFC",
-        "surface-soft": "#F1F5F9",
-        "badge-bg": "#EFF6FF",
-        "badge-text": "#1E40AF",
-        "badge-gold-bg": "#FEF3C7",
-        "badge-gold-text": "#92400E",
-        "badge-green-bg": "#DCFCE7",
-        "badge-green-text": "#166534",
-        error: "#DC2626",
-        warning: "#D97706",
-        success: "#15803D",
-      },
+  // Deep Petrol replaces old navy — same semantic role: hero bg, institutional headings
+  primary: "#06333C",
+  "primary-dark": "#04242B",   // Petrol Dark — top bar, high-contrast dark surfaces
+  "primary-light": "#0E4A56",  // Petrol Light — card dividers, hover highlights
+
+  // Marigold Gold — trust marks, SEC accreditation, tertiary accents
+  "accent-gold": "#EBA92F",
+  "accent-gold-light": "#F2C368", // lightened tint (not explicitly defined in doc — derived)
+
+  // Fresh Lime — primary CTA color per the new system
+  "accent-green": "#80BC2F",
+  "accent-green-bright": "#B8F264", // High-Lime — stat emphasis, subtitles on dark canvas
+  "accent-green-soft": "#EAF6DC",   // light tint (derived — not in doc)
+
+  ink: "#333333",              // Foreground / Charcoal
+  "ink-light": "#4B4B4B",      // derived mid-tone (not explicitly defined)
+  "ink-muted": "#6B7280",      // derived mid-tone (not explicitly defined)
+
+  hairline: "#E2E8F0",         // kept as-is — doc doesn't redefine border/hairline tokens
+  "hairline-strong": "#CBD5E1",// kept as-is
+
+  canvas: "#FFFFFF",
+  "canvas-subtle": "#F8FAFC",
+  "surface-soft": "#F1F5F9",
+
+  // Ocean Blue — informational/region badge accents
+  "badge-bg": "#E6F3F6",       // light tint of ocean blue (derived)
+  "badge-text": "#15768D",     // Ocean Blue
+
+  "badge-gold-bg": "#FCEFD8",  // light tint of Marigold Gold (derived)
+  "badge-gold-text": "#06333C",// Deep Petrol on gold, for AAA contrast
+
+  "badge-green-bg": "#EAF6DC", // light tint of Fresh Lime (derived)
+  "badge-green-text": "#06333C", // Deep Petrol — matches doc's 5.92:1 pairing w/ Fresh Lime
+
+  error: "#DC2626",            // unchanged — not covered by design doc
+  warning: "#EBA92F",          // Marigold Gold
+  success: "#80BC2F",          // Fresh Lime
+},
       fontFamily: {
         display: ["Montserrat", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
         editorial: ["Merriweather", "Georgia", "Cambria", "Times New Roman", "serif"],
