@@ -45,7 +45,7 @@
   }
 
   .btn-primary {
-    @apply btn bg-accent-green text-white hover:bg-accent-green-bright active:translate-y-px;
+    @apply btn bg-primary-light text-white hover:bg-accent-green active:translate-y-px;
   }
 
   .region-filter-btn {
@@ -72,12 +72,12 @@
     will-change: transform;
   }
 
-  .card-hover-lift {
-    @apply transition-[transform,box-shadow,border-color] duration-200 ease-out;
-  }
-  .card-hover-lift:hover {
-    @apply -translate-y-1 border-hairline-strong shadow-lift;
-  }
+.card-hover-lift {
+  @apply transition-[transform,box-shadow,border-color] duration-500 ease-spring;
+}
+.card-hover-lift:hover {
+  @apply -translate-y-2 border-accent-gold shadow-lift;
+}
 
   /* Tier 3 scroll reveal */
   .sr-item {
@@ -100,11 +100,11 @@
     transform: scale(0.95);
     transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .sr-visible {
-    opacity: 1 !important;
-    transform: translate(0, 0) scale(1) !important;
-  }
-  .delay-80 { transition-delay: 80ms; }
+ .sr-visible {
+  opacity: 1 !important;
+  transform: translate(0, 0) scale(1);
+}
+  .delay-80 { transition-delay: 60ms; }
   .delay-160 { transition-delay: 160ms; }
   .delay-240 { transition-delay: 240ms; }
   .delay-320 { transition-delay: 320ms; }

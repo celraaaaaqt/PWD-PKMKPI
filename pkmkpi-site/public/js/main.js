@@ -17,24 +17,28 @@
     });
   }
 
-  /* ---------------- Tier 3: scroll reveal ---------------- */
-  const revealTargets = document.querySelectorAll(".sr-item, .sr-left, .sr-right, .sr-scale");
-  if ("IntersectionObserver" in window) {
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("sr-visible");
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15, rootMargin: "0px 0px -50px 0px" }
-    );
-    revealTargets.forEach((el) => revealObserver.observe(el));
-  } else {
-    revealTargets.forEach((el) => el.classList.add("sr-visible"));
-  }
+/* ---------------- Tier 3: scroll reveal ---------------- */
+const revealTargets = document.querySelectorAll(".sr-item, .sr-left, .sr-right, .sr-scale");
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("sr-visible");
+          entry.target.classList.remove("delay-80", "delay-160", "delay-240", "delay-320", "delay-400");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15, rootMargin: "0px 0px -50px 0px" }
+  );
+  revealTargets.forEach((el) => revealObserver.observe(el));
+} else {
+  revealTargets.forEach((el) => {
+    el.classList.add("sr-visible");
+    el.classList.remove("delay-80", "delay-160", "delay-240", "delay-320", "delay-400");
+  });
+}
 
   /* ---------------- Tier 1: 3D tilt on hero image ---------------- */
   const tiltCard = document.getElementById("tilt-card");

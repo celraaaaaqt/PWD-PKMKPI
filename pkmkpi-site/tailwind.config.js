@@ -3,45 +3,47 @@ module.exports = {
   content: ["./public/**/*.{html,js}"],
   theme: {
     extend: {
-      colors: {
-  // Deep Petrol replaces old navy — same semantic role: hero bg, institutional headings
-  primary: "#06333C",
-  "primary-dark": "#04242B",   // Petrol Dark — top bar, high-contrast dark surfaces
-  "primary-light": "#0E4A56",  // Petrol Light — card dividers, hover highlights
+     colors: {
+  // Primary / Action — Fresh Lime — CTA buttons, active states, stat highlights
+  primary: "#06333C",           // Secondary/Canvas — Deep Petrol — hero bg, institutional headings
+  "primary-dark": "#04242B",    // Petrol Dark — top bar, input backgrounds
+  "primary-light": "#0E4A56",   // Petrol Light — dividers, card outlines
 
-  // Marigold Gold — trust marks, SEC accreditation, tertiary accents
-  "accent-gold": "#EBA92F",
-  "accent-gold-light": "#F2C368", // lightened tint (not explicitly defined in doc — derived)
+  "accent-gold": "#EBA92F",     // Marigold Gold — trust marks, accreditation accents
+  "accent-gold-light": "#F2C368", // derived light tint — not in doc
 
-  // Fresh Lime — primary CTA color per the new system
-  "accent-green": "#80BC2F",
-  "accent-green-bright": "#B8F264", // High-Lime — stat emphasis, subtitles on dark canvas
-  "accent-green-soft": "#EAF6DC",   // light tint (derived — not in doc)
+  "accent-green": "#80BC2F",       // Fresh Lime — primary CTA color
+  "accent-green-bright": "#B8F264",// High-Lime — AAA subtitles on dark canvas
+  "accent-green-soft": "#EAF6DC",  // derived light tint — not in doc
 
-  ink: "#333333",              // Foreground / Charcoal
-  "ink-light": "#4B4B4B",      // derived mid-tone (not explicitly defined)
-  "ink-muted": "#6B7280",      // derived mid-tone (not explicitly defined)
+  ink: "#333333",               // Foreground / Charcoal — body text on light surfaces
+  "ink-light": "#4B4B4B",       // derived mid-tone
+  "ink-muted": "#6B7280",       // derived mid-tone
 
-  hairline: "#E2E8F0",         // kept as-is — doc doesn't redefine border/hairline tokens
-  "hairline-strong": "#CBD5E1",// kept as-is
+  hairline: "#E2E8F0",
+  "hairline-strong": "#CBD5E1",
 
-  canvas: "#FFFFFF",
+  canvas: "#FFFFFF",             // Pure White — light cards, text on dark petrol
   "canvas-subtle": "#F8FAFC",
   "surface-soft": "#F1F5F9",
 
-  // Ocean Blue — informational/region badge accents
-  "badge-bg": "#E6F3F6",       // light tint of ocean blue (derived)
-  "badge-text": "#15768D",     // Ocean Blue
+  "badge-bg": "#E6F3F6",         // derived light tint of Ocean Blue
+  "badge-text": "#15768D",       // Ocean Blue — regional pills, informational badges
 
-  "badge-gold-bg": "#FCEFD8",  // light tint of Marigold Gold (derived)
-  "badge-gold-text": "#06333C",// Deep Petrol on gold, for AAA contrast
+  "badge-gold-bg": "#FCEFD8",
+  "badge-gold-text": "#06333C",
 
-  "badge-green-bg": "#EAF6DC", // light tint of Fresh Lime (derived)
-  "badge-green-text": "#06333C", // Deep Petrol — matches doc's 5.92:1 pairing w/ Fresh Lime
+  "badge-green-bg": "#EAF6DC",
+  "badge-green-text": "#06333C",
 
-  error: "#DC2626",            // unchanged — not covered by design doc
-  warning: "#EBA92F",          // Marigold Gold
-  success: "#80BC2F",          // Fresh Lime
+  error: "#DC2626",
+  warning: "#EBA92F",
+  success: "#80BC2F",
+
+  // High Contrast Palette — used when high-contrast mode is toggled on
+  "hc-bg": "#000B18",     // Obsidian
+  "hc-gold": "#FFD700",   // Gold
+  "hc-cyan": "#00E5FF",   // Cyan
 },
       fontFamily: {
         display: ["Montserrat", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],

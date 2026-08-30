@@ -27,12 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Force-reveal cards since they're injected after the scroll-reveal
     // observer's initial scan and never get picked up automatically.
-    grid.querySelectorAll(".sr-item").forEach(el => {
-      el.classList.remove("sr-item");
-      el.style.opacity = "1";
-      el.style.transform = "none";
-    });
-  }
+ grid.querySelectorAll(".sr-item").forEach(el => {
+    el.classList.add("sr-visible");
+  });
+}
 
   filterBtns.forEach(btn => {
     btn.addEventListener("click", () => {
